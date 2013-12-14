@@ -70,7 +70,8 @@ class WraithManager
     #ignore urls to file extension such as images etc
     ext = %w(flv swf png jpg gif asx zip rar tar 7z gz jar js css dtd xsd ico raw mp3 mp4 wav wmv ape aac ac3 wma aiff mpg mpeg avi mov ogg mkv mka asx asf mp2 m1v m3u f4v pdf doc xls ppt pps bin exe rss xml)
     Anemone.crawl(crawl_url) do |anemone|
-      anemone.skip_links_like /\.#{ext.join('|')}$/
+      # Don't spider the tags for a Jekyll blog
+      anemone.skip_links_like %r{^/tags.*}
       anemone.on_every_page do |page|
           #puts page.url
           #add the urls to the array
