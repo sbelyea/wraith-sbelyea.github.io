@@ -15,7 +15,8 @@ page.viewportSize = { width: view_port_width, height: 1500};
 page.settings = { loadImages: true, javascriptEnabled: true };
 
 // If you want to use additional phantomjs commands, place them here
-page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.17';
+page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.17 WRAITH';
+//page.settings.userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53';
 
 // You can place custom headers here, example below.
 // page.customHeaders = {
@@ -37,12 +38,6 @@ page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleW
 //     'domain': '.bbc.co.uk'
 // });
 
-phantom.addCookie({
-     'name': 'testcookie',
-     'value': 'true',
-     'domain': 'spqa.altria.com'
-     //'expires':  (new Date()).getTime() + (1000 * 60 * 60) 
- });
 
 page.open(url, function(status) {
   if (status === 'success') {

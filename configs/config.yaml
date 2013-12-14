@@ -16,8 +16,8 @@ directory:
 
 # Add only 2 domains, key will act as a label
 domains:
-  prod: "http://www.altria.com"
-  qa: "http://spqa.altria.com"
+  prod: "http://sbelyea.net"
+  localhost: "http://localhost:4000"
 
 #Type screen widths below, here are a couple of examples
 screen_widths:
@@ -28,9 +28,9 @@ screen_widths:
   - 1280
 
 #Type page URL paths below, here are a couple of examples
-paths:
-  home: "/Pages/default.aspx"
-  about: "/About-Altria/At-A-Glance/Pages/default.aspx"
+#paths:
+#  home: "/"
+#  articles: "/articles/working-with-wraith/"
 
 # If you don't want to name the paths explicitly you can use a yaml
 # collection as follows, and names will be derived by replacing / with _

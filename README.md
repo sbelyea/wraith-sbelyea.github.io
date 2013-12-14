@@ -26,7 +26,7 @@ It's up to you to decide which browser engine you want to run it against.
 On Mac OS X, the best way to install dependencies is if you have [homebrew](http://brew.sh).  It is the quickest way to install PhantomJS & ImageMagick.
 
     brew install imagemagick
-    brew install phantomjs
+    brew install phantomjs or brew install slimerjs
     
 ### Windows
 On Windows it's important to install ImageMagick from the binary found [here](http://www.imagemagick.org/script/binary-releases.php#windows). 
@@ -82,16 +82,17 @@ All config options will be placed in config.yaml. You can specify the snap file 
 
 ```yaml
 
-Headless browser option
+# Headless browser option
 browser:
   webkit: "phantomjs"
-  # gecko: "./slimerjs"
+  # gecko: "slimerjs"
 
+# Only used for webdriver
 device:
   base: firefox
   compare: firefox
 
-#If you want to have multiple snapping files, set the file name here
+# If you want to have multiple snapping files, set the file name here
 snap_file: "snap.js"
 
 # Type the name of the directory that shots will be stored in
@@ -174,6 +175,12 @@ After each screenshot is captured, the compare task will run, this will output a
 
 A gallery is available to view each of the images and the respective diff images located in the shots folder once all the images have been compared.
 
+## Grabber
+
+If you just want to see a single domains images and not compare them, perhaps for archiving, remove a domain and run the new rake task.   For default config, use grab, or specify a config using grabber. 
+
+`rake grab` and `rake grabber[config]`
+
 ## Contributing
 
 If you want to add functionality to this project, pull requests are welcome.
@@ -192,7 +199,9 @@ If you want to add functionality to this project, pull requests are welcome.
 
     rspec
 
-## Changelog - updated 13/11/13
+## Changelog - updated 6/12/13
+    Merge pull request #64 from BBC-News/fuzz
+    Merge pull request #63 from shuynh/add-nokogiri
     Merge pull request #57 from BBC-News/on_devices
     Merge pull request #61 from jaikdean/allow-numbers-in-domain-names
     Merge pull request #59 from lewisnyman/master
