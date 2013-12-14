@@ -22,6 +22,7 @@ domains:
 #Type screen widths below, here are a couple of examples
 screen_widths:
   - 320
+  - 480
   - 600
   - 768
   - 1024
