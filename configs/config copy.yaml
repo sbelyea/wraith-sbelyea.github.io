@@ -16,8 +16,8 @@ directory:
 
 # Add only 2 domains, key will act as a label
 domains:
-  prod: "http://www.altria.com"
-  qa: "http://spqa.altria.com"
+  english: "http://www.live.bbc.co.uk/news"
+  russian: "http://www.live.bbc.co.uk/russian"
 
 #Type screen widths below, here are a couple of examples
 screen_widths:
@@ -29,8 +29,8 @@ screen_widths:
 
 #Type page URL paths below, here are a couple of examples
 paths:
-  home: "/Pages/default.aspx"
-  about: "/About-Altria/At-A-Glance/Pages/default.aspx"
+  home: /
+  uk_index: /uk
 
 # If you don't want to name the paths explicitly you can use a yaml
 # collection as follows, and names will be derived by replacing / with _

@@ -37,6 +37,13 @@ page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleW
 //     'domain': '.bbc.co.uk'
 // });
 
+phantom.addCookie({
+     'name': 'testcookie',
+     'value': 'true',
+     'domain': 'spqa.altria.com'
+     //'expires':  (new Date()).getTime() + (1000 * 60 * 60) 
+ });
+
 page.open(url, function(status) {
   if (status === 'success') {
     window.setTimeout(function() {
